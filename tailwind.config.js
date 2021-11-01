@@ -1,20 +1,23 @@
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-  darkMode: false, // or 'media' or 'class'
-  theme: {
-    extend: {
-      colors: {
-        dark: "#494848"
-      }
+    purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+    darkMode: false, // or 'media' or 'class'
+    theme: {
+        extend: {
+            colors: {
+                dark: "#494848"
+            },
+            fontFamily: {
+                'schwifty': 'get schwifty'
+            }
+        },
     },
-  },
-  variants: {
-    extend: {},
-    colors: {
-      gray: {
-        dark :"#494848"
-      }
-    }
-  },
-  plugins: [],
+    variants: {
+        extend: {},
+        colors: {
+            gray: {
+                dark: "#494848"
+            }
+        }
+    },
+    plugins: [],
 }
