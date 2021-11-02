@@ -4,8 +4,10 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                dark: "#494848"
+                dark: "#494848",
+                pickle: "#0faad5"
             },
+
             fontFamily: {
                 'schwifty': 'get schwifty'
             }
@@ -13,11 +15,6 @@ module.exports = {
     },
     variants: {
         extend: {},
-        colors: {
-            gray: {
-                dark: "#494848"
-            }
-        }
     },
     plugins: [],
 }
