@@ -5,7 +5,7 @@ import Header from './components/Header';
 import Navbar from './components/Navbar';
 import Searcher from './components/Searcher';
 import { fetchCharacters } from './Conection/Conection';
-
+import Pagination from './components/Pagination';
 
 
 function App() {
@@ -24,7 +24,10 @@ function App() {
       <Navbar />
       <Header />
       < Searcher />
+      <Pagination/>
       <Characters characters={characters} />
+      <Pagination/>
+      
     </>
   );
 }

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Searcher = () => {
 	return (
-		<div className="flex items-center justify-center -my-8">
+		<div className="flex items-center justify-center -mt-8 mb-8">
 			<form action="GET">
 				<div className="grid md:grid-cols-4 grid-cols-1 gap-1">
 					<div className="">

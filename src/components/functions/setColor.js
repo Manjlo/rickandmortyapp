@@ -5,7 +5,7 @@ function setColor(items) {
 	const Alive = 'Alive'
 	const Unknown = 'unknown'
 	const red = 'bg-red-500'
-	const green = 'bg-green-500'
+	const green = 'bg-green-400'
 	const gray = 'bg-gray-500'
 	if (items === Dead) {
 		return red

@@ -1,11 +1,11 @@
 import React from 'react'
-import setColor from './functions/selectColor'
+import setColor from './functions/setColor'
 
 
 function Characters({ characters }) {
 	return (
-		<div className=" flex items-center justify-center my-20">
-			<div className="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-9">
+		<div className=" flex items-center justify-center my-10">
+			<div className="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-x-9 md:gap-y-12 gap-y-9">
 				{
 					characters.map((items, index) => (
 						<div key={index} className="h-96 w-64 bg-white rounded-2xl shadow-lg 
@@ -25,20 +25,20 @@ function Characters({ characters }) {
 									</div>
 								</div>
 							</div>
-							<div className="h-full mt-3 mb-8" >
+							<div className="mt-3" >
 								<div className="mb-2">
 									<h2 className="text-center text-lg font-semibold text-gray-600
 									 cursor-pointer">{items.name}
 									</h2>
 								</div>
-								<div className="flex items-center flex-col justify-center space-y-2">
+								<div className="flex flex-col justify-start space-y-2 ml-3">
 
 									<div>
-										<h3>Species:</h3>
-										<p>{items.species}</p>
+										<h3 className="font-medium text-gray-500 text-left">Species:</h3>
+										<p className="text-left">{items.species}</p>
 									</div>
-									<div className="flex flex-col items-center justify-center text-center">
-										<h3>Last Location: </h3>
+									<div className="flex flex-col justify-center text-left">
+										<h3 className="text-gray-500 font-medium text-left">Last Location: </h3>
 										<p>{items.location.name}</p>
 									</div>
 								</div>
