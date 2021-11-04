@@ -9,7 +9,7 @@ import { fetchCharacters } from './Conection/Conection';
 
 
 function App() {
-  const initUrl = "https://rickandmortyapi.com/api/character/?name="
+  const initUrl = "https://rickandmortyapi.com/api/character/"
 
   const [characters, setcharacters] = useState([]);
 
