@@ -1,6 +1,6 @@
 
 
-function selectColor(items) {
+function setColor(items) {
 	const Dead = 'Dead'
 	const Alive = 'Alive'
 	const Unknown = 'unknown'
@@ -17,4 +17,4 @@ function selectColor(items) {
 		return gray
 	}
 }
-export default selectColor
+export default setColor
