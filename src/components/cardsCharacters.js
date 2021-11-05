@@ -28,7 +28,7 @@ function Characters({ characters }) {
 							<div className="mt-3" >
 								<div className="mb-2">
 									<h2 className="text-center text-lg font-semibold text-gray-600
-									 cursor-pointer">{items.name}
+									 cursor-pointer hover:text-pickle">{items.name}
 									</h2>
 								</div>
 								<div className="flex flex-col justify-start space-y-2 ml-3">

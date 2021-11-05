@@ -4,30 +4,35 @@ import Characters from './components/cardsCharacters';
 import Header from './components/Header';
 import Navbar from './components/Navbar';
 import Searcher from './components/Searcher';
-import { fetchCharacters } from './Conection/Conection';
+import { fetchCharacters } from './api_conection/Conection';
 import Pagination from './components/Pagination';
+import { handlePagination } from './api_conection/apiPagination'
 
 
 function App() {
-  const initUrl = "https://rickandmortyapi.com/api/character/"
-
+  const [url, setUrl] = useState('https://rickandmortyapi.com/api/character/');
   const [characters, setcharacters] = useState([]);
+  const [info, setInfo] = useState([]);
+
+  const updateUrl = (position) => {
+    handlePagination(info.next, info.prev, setUrl, position)
+  }
 
   useEffect(() => {
-    fetchCharacters(initUrl, setcharacters);
+    fetchCharacters(url, setcharacters, setInfo);
 
   },
-    [])
+    [url])
 
   return (
     <>
       <Navbar />
       <Header />
       < Searcher />
-      <Pagination/>
+      <Pagination updateUrl={updateUrl} next={ info.next } prev={ info.prev }/>
       <Characters characters={characters} />
-      <Pagination/>
-      
+      <Pagination updateUrl={updateUrl} next={info.next} prev={ info.prev} />
+
     </>
   );
 }
