@@ -4,7 +4,7 @@ import setColor from './functions/setColor'
 
 function Characters({ characters }) {
 	return (
-		<div className=" flex items-center justify-center my-10">
+		<div className=" flex items-center justify-center my-10 ">
 			<div className="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-x-9 md:gap-y-12 gap-y-9">
 				{
 					characters.map((items, index) => (
