@@ -3,10 +3,10 @@ import React from 'react'
 
 function Pagination({ updateUrl, next, prev }) {
 	const onPrev = () => {
-		updateUrl('prev')
+		updateUrl(prev)
 	}
 	const onNext = () => {
-		updateUrl('next')
+		updateUrl(next)
 	}
 
 	return (
