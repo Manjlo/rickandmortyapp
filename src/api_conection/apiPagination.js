@@ -1,4 +1,4 @@
 
-export function handlePagination(newUrl, setUrl, position) {
+export function handlePagination(newUrl, setUrl) {
 	setUrl(newUrl);
 }

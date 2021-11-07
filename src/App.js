@@ -15,9 +15,8 @@ function App() {
   const [info, setInfo] = useState([]);
 
   const updateUrl = (newUrl) => {
-    handlePagination(newUrl, setUrl,)
+    handlePagination(newUrl, setUrl)
   }
-
 
   useEffect(() => {
     fetchCharacters(url, setcharacters, setInfo);
@@ -29,7 +28,7 @@ function App() {
     <>
       <Navbar />
       <Header />
-      < Searcher/>
+      < Searcher updateUrl={ updateUrl}/>
       <Pagination updateUrl={updateUrl} next={ info.next } prev={ info.prev }/>
       <Characters characters={characters} />
       <Pagination updateUrl={updateUrl} next={info.next} prev={ info.prev} />
