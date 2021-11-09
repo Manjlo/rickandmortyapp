@@ -2,7 +2,20 @@ import React from 'react'
 import setColor from './functions/setColor'
 
 
-function Characters({ characters }) {
+function Characters({ characters, open, setOpen, setModalContent, modalContent }) {
+	const character = (items) => {
+		const item = {
+			name: items.name,
+			status: items.status,
+			species: items.species,
+			gender: items.gender,
+			origin: items.origin.name,
+			image: items.image,
+			location: items.location.name
+		}
+		setModalContent(item)
+	}
+
 	return (
 		<div className=" flex items-center justify-center my-10 ">
 			{ characters?
@@ -29,7 +42,11 @@ function Characters({ characters }) {
 								<div className="mt-3 mb-5" >
 									<div className="mb-2 flex items-center justify-center">
 										<h2 className="text-center text-lg font-semibold text-gray-600
-									 cursor-pointer hover:text-pickle">{items.name}
+									 cursor-pointer hover:text-pickle" onClick={() => { 
+										 character(items)
+										 setOpen(true)
+										 
+									 }}>{items.name}
 										</h2>
 									</div>
 									<div className="flex flex-col justify-start space-y-2 ml-3">
