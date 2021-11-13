@@ -2,7 +2,7 @@ import React from 'react'
 import setColor from './functions/setColor'
 
 
-function Characters({ characters, open, setOpen, setModalContent, modalContent }) {
+function Characters({ characters, setOpen, setModalContent }) {
 	const character = (items) => {
 		const item = {
 			name: items.name,
@@ -17,9 +17,9 @@ function Characters({ characters, open, setOpen, setModalContent, modalContent }
 	}
 
 	return (
-		<div className=" flex items-center justify-center my-10 ">
+		<div className=" flex items-center justify-center ">
 			{ characters?
-				<div className="grid lg:grid-cols-4 sm:grid-cols-2grid-cols-1 gap-x-9 md:gap-y-12 gap-y-9">
+				<div className="grid lg:grid-cols-3 xl:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-x-10 md:gap-y-12 gap-y-9">
 					{
 						characters.map((items, index) => (
 							<div key={index} className="w-64 bg-white rounded-2xl shadow-lg 

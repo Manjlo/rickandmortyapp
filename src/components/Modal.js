@@ -48,7 +48,7 @@ export default function Example({ open, setOpen, modalContent }) {
 							<div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
 								<div className="sm:flex sm:items-start">
 
-									<div className="mx-auto flex-shrink-0 flex items-center justify-center bg-red-100 sm:mx-0 sm:h-56 sm:w-56">
+									<div className="flex-shrink-0 flex items-center justify-center bg-red-100 sm:mx-0 sm:h-56 sm:w-56">
 										<img className="rounded-l-2xl h-full" src={modalContent.image} alt="" />
 									</div>
 									<div className="mt-3 sm:mt-0 sm:ml-4 sm:text-left sm:w-80 ">
