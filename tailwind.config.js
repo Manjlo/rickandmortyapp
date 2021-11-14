@@ -1,6 +1,6 @@
 module.exports = {
     purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-    darkMode: false, // or 'media' or 'class'
+    darkMode: 'class', 
     theme: {
         extend: {
             colors: {
@@ -9,9 +9,6 @@ module.exports = {
                 bg: "#2B2B2B",
             },
 
-            fontFamily: {
-                'schwifty': 'get schwifty'
-            }
         },
     },
     variants: {

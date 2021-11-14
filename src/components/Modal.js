@@ -32,7 +32,7 @@ export default function Example({ open, setOpen, modalContent }) {
 						leave="ease-in duration-200"
 						leaveFrom="opacity-100 translate-y-0 sm:scale-100"
 						leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95">
-						<div className="inline-block align-bottom bg-white rounded-2xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-xl sm:w-full">
+						<div className="inline-block align-bottom bg-white dark:bg-dark rounded-2xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-xl sm:w-full">
 							<div className="sm:flex sm:flex-row-reverse w-full relative mb-3">
 								<button
 									type="buttom"
@@ -45,40 +45,40 @@ export default function Example({ open, setOpen, modalContent }) {
 								</button>
 
 							</div>
-							<div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+							<div className="px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
 								<div className="sm:flex sm:items-start">
 
 									<div className="flex-shrink-0 flex items-center justify-center bg-red-100 sm:mx-0 sm:h-56 sm:w-56">
 										<img className="rounded-l-2xl h-full" src={modalContent.image} alt="" />
 									</div>
 									<div className="mt-3 sm:mt-0 sm:ml-4 sm:text-left sm:w-80 ">
-										<Dialog.Title as="h3" className="text-2xl leading-6 font-medium text-gray-900 text-center">
+										<Dialog.Title as="h3" className="text-2xl leading-6 font-semibold text-gray-900 text-center dark:text-gray-300">
 											{modalContent.name}
 										</Dialog.Title>
 										<div className="mt-2 flex flex-col space-y-2">
-											<div className="flex items-center space-x-1">
-												<h4>Status: </h4>
-												<p>{ modalContent.status }</p>
+											<div className="flex items-center space-x-1 ">
+												<h4 className="text-gray-700 font-medium dark:text-gray-400">Status: </h4>
+												<p className="dark:text-white">{ modalContent.status }</p>
 
 											</div>
 											<div className="flex items-center space-x-1">
-												<h4>Species: </h4>
-												<p>{modalContent.species}</p>
+												<h4 className="font-medium text-gray-700 dark:text-gray-400">Species: </h4>
+												<p className="dark:text-white">{modalContent.species}</p>
 
 											</div>
 											<div className="flex items-center space-x-1">
-												<h4>Gender: </h4>
-												<p>{modalContent.gender}</p>
+												<h4 className="font-medium text-gray-700 dark:text-gray-400">Gender: </h4>
+												<p className="dark:text-white">{modalContent.gender}</p>
 												
 											</div>
 											<div className="flex items-center space-x-1">
-												<h4>Origin: </h4>
-												<p>{ modalContent.origin}</p>
+												<h4 className="text-gray-700 font-medium dark:text-gray-400">Origin: </h4>
+												<p className="dark:text-white">{ modalContent.origin}</p>
 
 											</div>
-											<div className="flex items-center space-x-1">
-												<h4>last known Location: </h4>
-												<p>{ modalContent.location}</p>
+											<div className="flex flex-col ">
+												<h4 className="text-gray-700 font-medium dark:text-gray-400 ">Last known Location: </h4>
+												<p className="dark:text-white text-left">{modalContent.location}</p>
 											</div>
 	
 										</div>
