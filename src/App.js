@@ -13,9 +13,9 @@ import Modal from './components/Modal';
 function App() {
   const [url, setUrl] = useState('https://rickandmortyapi.com/api/character/');
   const [characters, setcharacters] = useState([]);
-  const [info, setInfo] = useState([]);
+  const [info, setInfo] = useState({next: null, prev: null});
   const [open, setOpen] = useState(false)
-  const [modalContent, setModalContent] = useState([])
+  const [modalContent, setModalContent] = useState()
 
   const updateUrl = (newUrl) => {
     handlePagination(newUrl, setUrl)
@@ -23,10 +23,9 @@ function App() {
   }
 
   useEffect(() => {
-    fetchCharacters(url, setcharacters, setInfo)
-    console.log(modalContent.location)
+    fetchCharacters(url, setcharacters, setInfo, setModalContent, setOpen)
   },
-    [url,modalContent, open])
+    [url])
 
   return (
     <>
@@ -35,9 +34,9 @@ function App() {
       <Header />
       < Searcher updateUrl={updateUrl} />
       <Pagination updateUrl={updateUrl} next={info.next} prev={info.prev} />
-      <Characters characters={characters} open={open} setOpen={setOpen} setModalContent={setModalContent} modalContent={ modalContent}/>
+      <Characters characters={characters} setModalContent={setModalContent} setOpen={setOpen }/>
       <Pagination updateUrl={updateUrl} next={info.next} prev={info.prev} />
-      <Modal open={open} setOpen={setOpen} modalContent={ modalContent}/>
+      <Modal open={open} setOpen={setOpen} modalContent={modalContent}/>
     </>
   );
 }

@@ -20,3 +20,7 @@ const footer = ({dark}) => {
 }
 
 export default footer
+
+
+						
+
