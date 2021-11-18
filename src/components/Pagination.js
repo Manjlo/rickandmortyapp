@@ -10,7 +10,7 @@ function Pagination({ updateUrl, next, prev }) {
 	}
 
 	return (
-		<div className="flex items-center justify-center my-8">
+		<div className="flex items-center justify-center my-6">
 			<div className="">
 				<div className="grid grid-cols-2">
 					<div className={ {}}>
