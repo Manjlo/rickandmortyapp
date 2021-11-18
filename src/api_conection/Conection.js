@@ -1,15 +1,14 @@
 import { Dialog } from "@headlessui/react";
 
-export const fetchCharacters = async (url, setCharacters, setInfo, setModalContent, setOpen) => {
-
-
-
+export const fetchCharacters = async (url, setCharacters, setInfo, setModalContent, setOpen, setLoading) => {
+    setLoading(true)
     await fetch(url)
         .then(response => response.json())
         .then(data => {
             if (data.results) {
                 setCharacters(data.results)
                 setInfo(data.info);
+                setLoading(false)
             }
             else {
                 const Modalmessage = () => {
@@ -34,7 +33,7 @@ export const fetchCharacters = async (url, setCharacters, setInfo, setModalConte
                                     <img src="\Multimedia\kisspng-rick-and-morty-rick-sanchez-t-shirt-clothing-fashi-rick-and-morty-png-hd-5a7501b0b1cb37.6477402015176175847283.png" alt="" className="h-56" />
                                 </div>
                                 <div className="flex items-center justify-center mt-2 text-lg text-gray-500  dark:text-gray-100">
-                                    Ey mate. There is nothing with these features.
+                                    Hey mate. There is nothing with these features.
                                 </div>
                             </div>
 
@@ -49,7 +48,9 @@ export const fetchCharacters = async (url, setCharacters, setInfo, setModalConte
                     setInfo([])
                     setCharacters()
                 }
+                setLoading(false)
                 handleModal()
+
             }
 
         }

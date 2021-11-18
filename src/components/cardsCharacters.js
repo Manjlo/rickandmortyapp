@@ -1,9 +1,10 @@
 import React from 'react'
 import setColor from './functions/setColor'
 import { Dialog } from '@headlessui/react'
+import { SkeletonCards } from './SkeletonCards'
 
+function Characters({ characters, setModalContent, setOpen, loading }) {
 
-function Characters({ characters, setModalContent, setOpen }) {
 	const Modalcharacter = (items) => {
 		return (
 			<div className="px-4 pt-4 pb-3 sm:pb-4" >
@@ -73,6 +74,7 @@ function Characters({ characters, setModalContent, setOpen }) {
 
 	}
 
+	if (loading) return <span><SkeletonCards/></span>
 
 	return (
 		<div className=" flex items-center justify-center ">

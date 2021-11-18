@@ -4,7 +4,6 @@ const Searcher = ({ updateUrl }) => {
 
 	const setUrl = (name, status, species) => {
 
-
 		const url = `https://rickandmortyapi.com/api/character/?name=${name}&status=${status}&species=${species}`
 
 		updateUrl(url)
@@ -15,8 +14,6 @@ const Searcher = ({ updateUrl }) => {
 		const species = document.getElementById('species').value
 
 		setUrl(name, status, species)
-		
-		
 	}
 
 

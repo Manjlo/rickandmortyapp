@@ -16,6 +16,7 @@ function App() {
   const [info, setInfo] = useState({next: null, prev: null});
   const [open, setOpen] = useState(false)
   const [modalContent, setModalContent] = useState()
+  const [loading, setLoading] = useState(false);
 
   const updateUrl = (newUrl) => {
     handlePagination(newUrl, setUrl)
@@ -23,7 +24,7 @@ function App() {
   }
 
   useEffect(() => {
-    fetchCharacters(url, setcharacters, setInfo, setModalContent, setOpen)
+    fetchCharacters(url, setcharacters, setInfo, setModalContent, setOpen, setLoading)
   },
     [url])
 
@@ -34,7 +35,7 @@ function App() {
       <Header />
       < Searcher updateUrl={updateUrl} />
       <Pagination updateUrl={updateUrl} next={info.next} prev={info.prev} />
-      <Characters characters={characters} setModalContent={setModalContent} setOpen={setOpen }/>
+      <Characters characters={characters} setModalContent={setModalContent} setOpen={setOpen} loading={ loading }/>
       <Pagination updateUrl={updateUrl} next={info.next} prev={info.prev} />
       <Modal open={open} setOpen={setOpen} modalContent={modalContent}/>
     </>
