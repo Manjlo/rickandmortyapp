@@ -1,8 +1,70 @@
 import React from 'react'
 import useDarkMode from './functions/darkMode'
-
-const Navbar = ({ dark }) => {
+import { Dialog } from '@headlessui/react'
+import { FacebookShareButton, TwitterShareButton, WhatsappShareButton, FacebookMessengerShareButton, TelegramShareButton, RedditShareButton, FacebookIcon, TwitterIcon, WhatsappIcon, FacebookMessengerIcon, TelegramIcon, RedditIcon } from 'react-share'
+const Navbar = ({ setModalContent, setOpen }) => {
 	const [colorTheme, setTheme] = useDarkMode()
+	const pageUrl = 'http://www.cualquiercosa.com'
+
+	const Modalmessage = () => {
+		return (
+			<div className="bg-white dark:bg-dark p-4 m-8 rounded-3xl">
+				<div className=''>
+					<div>
+						<button
+							type="buttom"
+							className="w-full inline-flex justify-center transform hover:scale-110 text-base font-medium sm:w-auto sm:text-sm absolute right-2 top-1"
+							onClick={() => setOpen(false)}
+						>
+							<svg className="border-0 text-dark dark:text-white sm:h-8 sm:w-8 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+								<path className="border-0" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+							</svg>
+						</button>
+
+						<Dialog.Title className='flex items-center justify-center text-3xl font-bold text-gray-600 dark:text-gray-300 text-center' as='h3'>Do you like this page?</Dialog.Title>
+					</div>
+					<div className='flex items-center justify-center my-3'>
+
+						<img className='h-56' src="\Multimedia\rick-and-morty-folder-icon-43819.png" alt="" />
+					</div>
+				</div>
+				<div className='flex items-center justify-center flex-col'>
+					<Dialog.Description as='p' className="text-xl text-dark font-semibold dark:text-white text-center">
+						Ok, I don't care, but share it!
+					</Dialog.Description>
+					<div className='flex items-center justify-center my-3'>
+						<div className='grid sm:grid-cols-6 grid-cols-3 sm:gap-0 gap-2'>
+							<FacebookShareButton url={pageUrl}>
+								<FacebookIcon size={40} />
+							</FacebookShareButton>
+							<TwitterShareButton url={pageUrl}>
+								<TwitterIcon size={40} />
+							</TwitterShareButton>
+							<WhatsappShareButton url={pageUrl}>
+								<WhatsappIcon size={40} />
+							</WhatsappShareButton>
+							<FacebookMessengerShareButton url={pageUrl}>
+								<FacebookMessengerIcon size={40} />
+							</FacebookMessengerShareButton>
+							<TelegramShareButton url={pageUrl}>
+								<TelegramIcon size={40} />
+							</TelegramShareButton>
+							<RedditShareButton url={pageUrl}>
+								<RedditIcon size={40} />
+							</RedditShareButton>						
+						</div>
+					</div>
+
+				</div>
+			</div>
+		)
+	}
+
+
+	const handleModal = () => {
+		setModalContent(Modalmessage)
+
+	}
 	return (
 		<div className="">
 			<div className="max-w-7xl mx-auto p-4 flex items-center justify-center">
@@ -15,10 +77,14 @@ const Navbar = ({ dark }) => {
 					<div className="flex items-center justify-end md:col-span-9 col-span-6 space-x-1">
 						<div className="mx-1.5 border border-gray-100 dark:border-bg
 						 rounded-md hover:border-black dark:hover:border-white px-3">
-							<a href="/" className="text-black dark:text-white" translate="no">Share</a>
+							<button className="text-black dark:text-white" translate="no" onClick={(e) => {
+								handleModal()
+								setOpen(true)
+							}
+							}>Share</button>
 						</div>
 						<div>
-							<span onClick={()=> setTheme(colorTheme)} className="cursor-pointer">
+							<span onClick={() => setTheme(colorTheme)} className="cursor-pointer">
 								{colorTheme === 'dark' ?
 									<svg
 										className="w-6 h-6 text-blue-800"

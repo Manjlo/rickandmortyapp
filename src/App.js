@@ -31,7 +31,7 @@ function App() {
   return (
     <>
 
-      <Navbar />
+      <Navbar setModalContent={setModalContent} setOpen={ setOpen}/>
       <Header />
       < Searcher updateUrl={updateUrl} />
       <Pagination updateUrl={updateUrl} next={info.next} prev={info.prev} />

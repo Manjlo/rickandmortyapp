@@ -26,13 +26,13 @@ export const fetchCharacters = async (url, setCharacters, setInfo, setModalConte
                                         </svg>
                                     </button>
                                 </div>
-                                <Dialog.Title as="h3" className="flex items-center justify-center text-3xl font-semibold text-gray-600 dark:text-gray-300">
+                                <Dialog.Title as="h3" className="flex items-center justify-center text-3xl font-bold text-gray-600 dark:text-gray-300">
                                     Error 404
                                 </Dialog.Title>
                                 <div className="h-56 flex items-center justify-center mt-2">
                                     <img src="\Multimedia\kisspng-rick-and-morty-rick-sanchez-t-shirt-clothing-fashi-rick-and-morty-png-hd-5a7501b0b1cb37.6477402015176175847283.png" alt="" className="h-56" />
                                 </div>
-                                <div className="flex items-center justify-center mt-2 text-lg text-gray-500  dark:text-gray-100">
+                                <div className="flex items-center justify-center mt-2 text-xl text-gray-600  dark:text-gray-100 font-semibold">
                                     Hey mate. There is nothing with these features.
                                 </div>
                             </div>
