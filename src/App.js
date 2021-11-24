@@ -8,6 +8,7 @@ import { fetchCharacters } from './api_conection/Conection';
 import Pagination from './components/Pagination';
 import { handlePagination } from './api_conection/apiPagination'
 import Modal from './components/Modal';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -37,7 +38,8 @@ function App() {
       <Pagination updateUrl={updateUrl} next={info.next} prev={info.prev} />
       <Characters characters={characters} setModalContent={setModalContent} setOpen={setOpen} loading={ loading }/>
       <Pagination updateUrl={updateUrl} next={info.next} prev={info.prev} />
-      <Modal open={open} setOpen={setOpen} modalContent={modalContent}/>
+      <Modal open={open} setOpen={setOpen} modalContent={modalContent} />
+      <Footer/>
     </>
   );
 }

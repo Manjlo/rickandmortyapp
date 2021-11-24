@@ -1,7 +1,7 @@
 import React from 'react'
 import setColor from './functions/setColor'
 import { Dialog } from '@headlessui/react'
-import { SkeletonCards } from './SkeletonCards'
+import { SkeletonCards } from './Skeleton/SkeletonCards'
 
 function Characters({ characters, setModalContent, setOpen, loading }) {
 
@@ -82,8 +82,8 @@ function Characters({ characters, setModalContent, setOpen, loading }) {
 				<div className="grid lg:grid-cols-3 xl:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-x-10 md:gap-y-8 gap-y-9">
 					{
 						characters.map((items, index) => (
-							<div key={index} className="w-64 bg-white dark:bg-dark rounded-2xl shadow-lg 
-						transition duration-300 transform hover:-translate-y-4 ">
+							<div key={index} className="w-64 bg-white dark:bg-dark rounded-2xl 
+						transition duration-300 transform hover:-translate-y-4 hover:shadow-2xl">
 								<div className="h-52 rounded-t-2xl flex items-center justify-center dark:bg-bg">
 									<div className="w-64 relative">
 										<img src={items.image} alt="" className="rounded-t-2xl h-52 w-full " />
