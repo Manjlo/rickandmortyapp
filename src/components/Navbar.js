@@ -13,7 +13,7 @@ const Navbar = ({ setModalContent, setOpen }) => {
 					<div>
 						<button
 							type="buttom"
-							className="w-full inline-flex justify-center transform hover:scale-110 text-base font-medium sm:w-auto sm:text-sm absolute right-2 top-1"
+							className=" justify-center transform hover:scale-110 text-base font-medium sm:w-auto sm:text-sm absolute right-2 top-2"
 							onClick={() => setOpen(false)}
 						>
 							<svg className="border-0 text-dark dark:text-white sm:h-8 sm:w-8 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
@@ -21,15 +21,15 @@ const Navbar = ({ setModalContent, setOpen }) => {
 							</svg>
 						</button>
 
-						<Dialog.Title className='flex items-center justify-center text-3xl font-bold text-gray-600 dark:text-gray-300 text-center' as='h3'>Do you like this page?</Dialog.Title>
+						<Dialog.Title className='flex items-center justify-center sm:text-3xl text-2xl font-semibold text-gray-600 dark:text-gray-300 text-center' as='h3'>Do you like this page?</Dialog.Title>
 					</div>
 					<div className='flex items-center justify-center my-3'>
 
-						<img className='h-56' src="\Multimedia\rick-and-morty-folder-icon-43819.png" alt="" />
+						<img className='sm:h-56 h-44' src="\Multimedia\rick-and-morty-folder-icon-43819.png" alt="" />
 					</div>
 				</div>
 				<div className='flex items-center justify-center flex-col'>
-					<Dialog.Description as='p' className="text-xl text-dark font-semibold dark:text-white text-center">
+					<Dialog.Description as='p' className="sm:text-xl text-lg text-dark font-semibold dark:text-white text-center">
 						Ok, I don't care, but share it!
 					</Dialog.Description>
 					<div className='flex items-center justify-center my-3'>

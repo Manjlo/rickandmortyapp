@@ -8,7 +8,7 @@ function Characters({ characters, setModalContent, setOpen, loading }) {
 	const Modalcharacter = (items) => {
 		return (
 			<div className="px-4 pt-4 pb-3 sm:pb-4" >
-				<div className="flex items-center justify-center mb-4 ">
+				<div className="flex items-center justify-center mb-4 sm:mx-0 mx-6 ">
 					<Dialog.Title as="h3" className="text-2xl leading-6 font-semibold text-gray-700 text-center dark:text-gray-200">
 						{items.name}
 					</Dialog.Title>
@@ -16,7 +16,7 @@ function Characters({ characters, setModalContent, setOpen, loading }) {
 				<div>
 					<button
 						type="buttom"
-						className="w-full inline-flex justify-center transform hover:scale-110 text-base font-medium sm:w-auto sm:text-sm absolute right-3 top-3"
+						className=" justify-center transform hover:scale-110 text-base font-medium sm:w-auto sm:text-sm absolute right-3 top-3"
 						onClick={() => setOpen(false)}
 					>
 						<svg className="border-0 text-dark dark:text-white sm:h-8 sm:w-8 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
@@ -25,14 +25,14 @@ function Characters({ characters, setModalContent, setOpen, loading }) {
 					</button>
 				</div>
 
-				<div className="sm:flex sm:items-center sm:justify-center mb-4">
+				<div className="sm:flex sm:items-center sm:justify-center sm:mb-4 mb-2">
 
 					<div className="flex-shrink-0 flex items-center justify-center sm:mx-0 sm:w-56">
 						<img className="rounded-3xl h-full" src={items.image} alt="" />
 					</div>
 					<div className="mt-3 sm:mt-0 sm:ml-5 sm:text-left sm:w-72 sm:h-56 rounded-3xl sm:pl-3 bg-white dark:bg-dark ">
 
-						<div className="mt-2 flex flex-col space-y-2">
+						<div className="mt-2 flex flex-col space-y-2 sm:p-0 p-4">
 							<div className="flex items-center space-x-1.5 ">
 								<h4 className="text-gray-500 font-semibold dark:text-gray-400">Status: </h4>
 								<p className={`dark:text-white text-${setColor(items.status)} dark:text-${setColor(items.status)}`}>{items.status}</p>
