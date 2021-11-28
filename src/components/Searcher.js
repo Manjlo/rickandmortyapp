@@ -1,5 +1,4 @@
 import React from 'react'
-import setColor from './functions/setColor'
 
 const Searcher = ({ updateUrl }) => {
 
