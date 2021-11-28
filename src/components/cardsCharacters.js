@@ -60,6 +60,7 @@ function Characters({ characters, setModalContent, setOpen, loading }) {
 
 						</div>
 					</div>
+					<div className='hidden text-red-500'></div>
 				</div>
 			</div >
 		)

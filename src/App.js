@@ -8,7 +8,7 @@ import { fetchCharacters } from './api_conection/Conection';
 import Pagination from './components/Pagination';
 import { handlePagination } from './api_conection/apiPagination'
 import Modal from './components/Modal';
-import Footer from './components/Footer';
+import Footer  from './components/Footer';
 
 
 function App() {
