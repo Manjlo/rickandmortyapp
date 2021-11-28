@@ -4,7 +4,7 @@ import Characters from './components/cardsCharacters';
 import Header from './components/Header';
 import Navbar from './components/Navbar';
 import Searcher from './components/Searcher';
-import Footer from './components/Footer';
+import Footer from './components/Footer/Footer';
 import { fetchCharacters } from './api_conection/Conection';
 import Pagination from './components/Pagination';
 import { handlePagination } from './api_conection/apiPagination'
