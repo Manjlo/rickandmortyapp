@@ -4,7 +4,7 @@ import { Dialog } from '@headlessui/react'
 import { FacebookShareButton, TwitterShareButton, WhatsappShareButton, FacebookMessengerShareButton, TelegramShareButton, RedditShareButton, FacebookIcon, TwitterIcon, WhatsappIcon, FacebookMessengerIcon, TelegramIcon, RedditIcon } from 'react-share'
 const Navbar = ({ setModalContent, setOpen }) => {
 	const [colorTheme, setTheme] = useDarkMode()
-	const pageUrl = 'http://www.cualquiercosa.com'
+	const pageUrl = 'https://rickandmortyapp-lyart.vercel.app/'
 
 	const Modalmessage = () => {
 		return (
